@@ -1,5 +1,6 @@
-Content: DOM, Events, Functions
+Content: DOM, Events, Functions, Arrays, Condicionals
 
+- Data Attrubutes
 - DOM (Document Object Model)
 - querySelector ()
 - document.getElementById()
@@ -8,6 +9,7 @@ Content: DOM, Events, Functions
 - element.innerHTML
 - element.innerText
 - element.attribute
+- element.getAttribute()
 - element.setAttribute(attribute, value)
 - document.write()
 - document.appendChild()

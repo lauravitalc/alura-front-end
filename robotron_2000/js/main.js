@@ -1,11 +1,7 @@
-const subtract = document.querySelector("#subtract");
-const sum    = document.querySelector("#sum");
-const arm    = document.querySelector("#arm");
-
-const control = document.querySelectorAll(".controle-ajuste");
+const control = document.querySelectorAll("[data-control]");
 control.forEach( (element) => {
     element.addEventListener("click", (event) => {
-        manipulateData(event.target.textContent)
+        manipulateData(event.target.dataset.control, event.target.parentNode)
     })
 })
 
@@ -13,10 +9,11 @@ control.forEach( (element) => {
 // sum.addEventListener("click", () => { manipulateData("sum")})
 // subtract.addEventListener("click", () => {manipulateData("subtract")})
 
-function manipulateData(operacao){
+function manipulateData(operacao, controle){
+    const part = controle.querySelector("[data-count]");
  if(operacao === "-"){
-    arm.value = parseInt(arm.value) - 1
+    part.value = parseInt(part.value) - 1
  } else {
-    arm.value = parseInt(arm.value) + 1
+    part.value = parseInt(part.value) + 1
  }
 }
