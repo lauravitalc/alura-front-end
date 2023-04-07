@@ -9,3 +9,5 @@ Project: Midi
 
 Content: Functions, Lists, Loops, Events, Logic.
 ### 2. [JavaScript: Manipulating DOM]()
+
+### [JavaScript: Manipulating data in the browser]()
