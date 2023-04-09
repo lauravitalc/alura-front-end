@@ -1,0 +1,1 @@
+".....Um Superset significa que tudo, total conhecimento que você tenha de Java Script é utilizado pela linguagem TypeScript, porém a linguagem TypeScript adiciona tipagem estática e outros recursos da linguagem para tornar o nosso código menos sujeito a defeitos, menos sujeito a bugs e tornar a experiência do desenvolvedor uma experiência mais primorosa......"
