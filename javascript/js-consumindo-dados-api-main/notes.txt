@@ -1,0 +1,80 @@
+Quando chamamos o primeiro console.log, ele vai ser enviado lá para o Call Stack, “Essa ação foi enviada para o Call Stack”. Em seguida, aparecerá uma chamada da função. 
+Conforme havia comentado, a criação da função fica ali, mas ela só é chamada quando chamamos no código.
+
+Então, o mandaMensagem() é a chamada e ele fica no Call Stack até terminar o que precisa fazer: imprimir três console.log.
+
+Então, cada um deles vai ser chamado, terminar de acontecer e sair. O próximo console.log será chamado, impresso na tela e depois vai sair. Por fim, o terceiro console.log vai aparecer e sair.
+Assim, a chamada da função termina sua atuação ali, o que tinha para fazer, e vai sair do Call Stack. Só após terminar tudo que tinha para fazer, vai sair da Call Stack. Então, será chamado o último console.log, o "Tchau tchau!".
+Imprimiu na tela, sumiu. Basicamente é isso que acontece no sistema síncrono.
+
+Agora sabemos mais a fundo o que é cada parte. 
+O Event Loop é como um segurança na festa e vai 
+guiando para qual porta a pessoa tem que entrar, qual é o acesso dela e quando ela deve acontecer. 
+Então ele fica o tempo inteiro no código olhando o que vai ser chamado para a Call Stack.
+
+Mas também temos a Task Queue, que vai dar conta do nosso sistema síncrono. 
+É a outra fila que o guarda vai fazer a segurança
+
+No sistema do JavaScript, havia uma parte de Task Queue que não vimos funcionar e 
+agora a colocaremos em prática. Naquele código que fizemos antes, a função mandaMensagem() 
+agora vai começar com o setTimeOut, depois abriremos parênteses, 
+faremos a chamada da função com mandaMensagem, 5000) e fecharemos parênteses.
+
+
+__________________________________________
+
+Síncrono 
+Assíncrono 
+Callback - O callback é uma função que é passada como argumento para uma outra função.
+
+API - Ela permite que dois componentes de software se comuniquem. Chamamos esses dois lados de cliente e servidor. 
+A aplicação que envia a solicitação é chamada de cliente e a aplicação que envia a resposta é chamada de servidor.
+
+Fetch - É assíncrono e tem como parâmetro obrigatório a URL da API.
+
+Promise -  A Promise é uma promessa de que algo vai acontecer. Como retorno, ela pode ser resolvida ou rejeitada.
+Isso permite que métodos assíncronos se tornem síncronos. Ou seja, ao invés de retornar um valor específico, 
+o valor final, como ainda não chegou lá, ele retorna uma promessa que esse valor uma hora vai chegar. Quando o nosso 
+pedido sai para a entrega, ele gera uma Promise, isto é, uma promessa de que o 
+pedido será entregue ou pode acontecer algum problema e o entregador não conseguir chegar até a sua casa para entregar esse produto.
+
+.then() - Ele pega a requisição, e aquele valor, ele faz alguma operação com ele. Faz alguma coisa com a resposta retornada. Mas ele só faz se aquela promessa foi resolvida.
+
+.catch() - Pega o erro e imprime na tela -  O que acontece se der algum erro e aquela promessa for rejeitada? 
+
+.finally() - Aparece quando dá certo e errado - Independe do resultado.
+
+_____________________________________________
+
+Arrow function:
+
+Em uma função tradicional, caso você crie uma variável dentro dela,
+seu contexto é referente a função onde ela está. 
+Para entender melhor: se você usar a palavra chave “.this”, você está se referindo a essa função em si.
+
+Já em uma arrow function temos um contexto externo. 
+Por exemplo, se essa arrow function for criada dentro de outra função seu contexto será aquela função que ela está dentro. 
+Caso a função for aplicada fora de outra função, seu contexto será global, o código inteiro.
+
+
+_____________________________________________
+
+Requisição:
+
+Quando estamos realizando uma requisição para a API, estamos trocando mensagens HTTP’s. 
+HTTP é um protocolo, uma forma de conversa entre duas máquinas, que permite transferir hiper-texto de um lado a outro. 
+Daí o nome Hyper Text Transport Protocol.
+
+Uma requisição é composta de uma request (solicitação) e uma response (resposta). 
+Request e Response são dois tipos de mensagem diferentes quando falamos de HTTP. 
+A especificação HTTP diz exatamente o que podemos colocar dentro de cada um destes tipos de mensagem para que todos que "falem" 
+o idioma HTTP consigam trocar informações corretamente.
+
+Em uma response é retornado um response code (código de resposta) e um motivo, que dá significado ao código. 
+A estrutura padrão desse código tem três dígitos, sendo o primeiro referente a classificação dele. Elas são:
+
+1XX: Informativo – a solicitação foi aceita ou está em andamento;
+2XX: Confirmação – a solicitação foi concluída ou entendida;
+3XX: Redirecionamento – faltou alguma coisa na solicitação;
+4XX: Erro do cliente – houve um erro na solicitação;
+5XX: Erro no servidor – houve uma falha no servidor durante a solicitação.
