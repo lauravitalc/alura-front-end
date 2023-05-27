@@ -78,3 +78,12 @@ A estrutura padrão desse código tem três dígitos, sendo o primeiro referente
 3XX: Redirecionamento – faltou alguma coisa na solicitação;
 4XX: Erro do cliente – houve um erro na solicitação;
 5XX: Erro no servidor – houve uma falha no servidor durante a solicitação.
+
+
+____________________________________________________ 
+
+Async Wait - Quando temos vários "então", temos vários callbacks. 
+E esse termo e essa situação é bem conhecida com o termo de Callback Hell - o Inferno de callbacks. 
+Quando temos vários then() com várias funções. Não é uma condição de fácil leitura.
+
+Promise.all -
