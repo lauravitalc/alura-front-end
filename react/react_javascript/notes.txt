@@ -1,0 +1,7 @@
+npx create-react-app organo
+npm start
+_____________________________
+npx vs npm
+Agora não usamos o npx mas sim o npm, a diferença é que o npm nós vamos utilizar para rodar coisas locais, 
+quando rodamos o npx quer dizer que estamos rodando o script de forma remota, 
+não está muito vinculado ao ambiente local.
