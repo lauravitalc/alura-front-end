@@ -87,3 +87,14 @@ E esse termo e essa situação é bem conhecida com o termo de Callback Hell - o
 Quando temos vários then() com várias funções. Não é uma condição de fácil leitura.
 
 Promise.all -
+
+
+_____________________________________________
+
+ addEventListener() - permite chamar funções quando ocorre alguma interação do usuário em específico.
+
+
+ ____________________________________________________
+
+
+ https://www.alura.com.br/artigos/10-heuristicas-de-nielsen-uma-formula-pra-evitar-erros-basicos-de-usabilidade
