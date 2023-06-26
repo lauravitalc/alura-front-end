@@ -24,3 +24,12 @@ Um componente não controlado (stateless em inglês) funciona como um elemento d
 Quando um usuário insere dados em um campo de formulário (um input box, dropbox, etc), a informação atualizada é 
 refletida sem necessidade do React fazer nada. No entanto, isso também significa que você não pode forçar o campo a 
 ter um certo valor.
+
+_________________________________________________
+
+Você estava passando a prop aoDeletar para seus componentes, mas a função não estava sendo executada no evento de click.
+Após pesquisas, percebeu que a prop aoDeletar estava undefined. Qual o possível motivo deste problema?
+
+A função não está sendo passada em todos os componentes acima do que você quer utilizar.
+Isso aí! Muito provavelmente, caso o seu componente esteja muito abaixo na árvore, você não está passando 
+a função para todos os componentes!
