@@ -5,7 +5,7 @@ import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
 
 function App() {
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Programação',
       corPrimaria: '#D9F7E9',
@@ -36,7 +36,8 @@ function App() {
       corPrimaria: '#FFEEDF',
       corSecundaria: '#FF8A29'
     }
-  ]
+  ])
+
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
@@ -47,12 +48,23 @@ function App() {
   function deletarColaborador() {
     console.log('Olá!')
   }
+
+  function mudarCorDoTime(cor, nome){
+    setTimes(times.map(time => {
+      if(time.nome === nome){
+        time.corSecundaria = cor;
+      }
+      return time;
+    }))
+  }
+
   return (
     <div className="App">
       <Banner/>
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
       {times.map(time => 
-        <Time key={time.nome} 
+        <Time mudarCor={mudarCorDoTime}
+            key={time.nome} 
             nome={time.nome} 
             corPrimaria={time.corPrimaria} 
             corSecundaria={time.corSecundaria} 

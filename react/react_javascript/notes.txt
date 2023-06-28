@@ -33,3 +33,12 @@ Após pesquisas, percebeu que a prop aoDeletar estava undefined. Qual o possíve
 A função não está sendo passada em todos os componentes acima do que você quer utilizar.
 Isso aí! Muito provavelmente, caso o seu componente esteja muito abaixo na árvore, você não está passando 
 a função para todos os componentes!
+_________________________________________________
+React só muda states, não muda constantes
+
+Por que precisamos transformar a constante times em um state para mudar a cor?
+
+Mudamos porque só assim o React “escuta a mudança”.
+
+Isso aí! Com o setState o React fica ciente que aquele pedaço pode ser mudado,
+e assim que ele é mudado, o React atualiza a tela por nós.
