@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente.js";
+import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 
 const cliente1 = new Cliente();
@@ -25,5 +25,5 @@ contaCorrente1.depositar(500);
 contaCorrente1.tranferir(valorTransferencia, contaCorrente2);
 
 console.log(contaCorrente1);
-console.log(contaCorrente2);
+console.log(contaCorrente2.cliente);
 
